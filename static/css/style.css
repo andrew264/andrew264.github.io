@@ -12,24 +12,33 @@
 }
 
 .container h1 {
-    font-size: 36pt;
-    font-weight: 700;
+    font-size: 6vw;
+    font-weight: bolder;
 }
 
 .container h2 {
-    font-size: 32pt;
-    font-weight: 500;
+    font-size: 4vw;
+    font-weight: bold;
 }
 
 .container h3 {
-    font-size: 26pt;
-    font-weight: 400;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.container h4 {
+    font-size: 1.2vw;
+    font-weight: bold;
 }
 
 .container p {
     margin-top: 0.5em;
-    font-size: 16pt;
-    font-weight: 300;
+    font-size: 1vw;
+    font-weight: normal;
+}
+
+.center-align {
+    text-align: center;
 }
 
 .left-container {
@@ -40,21 +49,41 @@
     height: 88vh;
     background-color: #EEE;
     color: black;
-    padding: 20px;
+    padding: 2vw;
 }
 
 .profile-pic {
-    width: 75%;
+    max-width: 75%;
+    max-height: 100%;
     border-radius: 50%;
-    margin-right: 10px;
     position: relative;
     top: 0;
+}
+
+#personal-info-text {
+    margin-top: 1em;
+    text-align: center;
 }
 
 .info {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 0.5em;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.75em;
+}
+
+.info-item p {
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.info-item h4 {
+    margin-top: 0.5em;
 }
 
 header, footer {
@@ -62,12 +91,12 @@ header, footer {
     display: flex;
     justify-content: space-between;
     color: white;
-    padding: 25px;
+    padding: 1em;
     align-items: center;
     background-color: #333;
     width: 100%;
     height: 6vh;
-    position: sticky;
+    position: relative;
 }
 
 footer {
@@ -76,30 +105,104 @@ footer {
 }
 
 header h1 {
-    font-size: 32pt;
-    font-weight: 700;
+    font-size: 3vh;
+    font-weight: bolder;
 }
 
 footer p {
-    font-size: 12pt;
+    font-size: 1.2vw;
     font-weight: 300;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 20px;
-    text-align: left;
-}
-
-.table-head {
+.bold-text {
     font-weight: bold;
 }
 
 .right-container {
     width: 75%;
     height: 88vh;
+}
+
+@media screen and (max-width: 768px) {
+    header, footer {
+        flex-direction: column;
+    }
+
+    footer p {
+        font-size: 1.2vh;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container h1 {
+        font-size: 6vh;
+    }
+
+    .container h2 {
+        font-size: 4vh;
+    }
+
+    .container h3 {
+        font-size: 2vh;
+    }
+
+    .container h4 {
+        padding-top: 0.5em;
+        font-size: 1.5vh;
+    }
+
+    .container p {
+        font-size: 1.3vh;
+    }
+
+    .left-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 25vh;
+    }
+
+    .right-container {
+        width: 100%;
+        height: 75vh;
+    }
+
+    .profile-pic {
+        max-width: 25%;
+        max-height: 100%;
+        border-radius: 50%;
+        margin-right: 10px;
+        position: relative;
+        top: 0;
+    }
+
+    #personal-info-text {
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 0.5em;
+    }
+
+    .info-item {
+        margin-bottom: 0.75em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .info-item p {
+        margin-top: 0.5em;
+        text-align: left;
+    }
+
+    .info-item.p:hover {
+        overflow: visible;
+    }
+
 }

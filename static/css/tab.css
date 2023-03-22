@@ -1,6 +1,6 @@
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
+    border-top: 1px solid #ccc;
     background-color: #f1f1f1;
 }
 
@@ -27,12 +27,12 @@
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
-    -animation: fadeEffect 1s;
+    animation: fadeEffect 0.5s ease-in-out;
 }
 
 @keyframes fadeEffect {
     from {
-        opacity: 0;
+        opacity: 0.1;
     }
     to {
         opacity: 1;

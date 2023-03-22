@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>My Portfolio</title>
     <link href="static/css/style.css" rel="stylesheet">
     <link href="static/css/tab.css" rel="stylesheet">
@@ -20,24 +21,29 @@
 
     <div class="left-container">
         <img alt="Profile Picture" class="profile-pic" src="static/images/profile.jpg">
+        <h3 id="personal-info-text">Personal Info</h3>
         <div class="info">
-            <h3>Personal Info</h3>
-            <table>
-                <tr>
-                    <td class="table-head">Name</td>
-                    <td>Andrew Santhosh C</td>
-                </tr>
-                <tr>
-                    <td class="table-head">Age</td>
-                    <td><span id="age"><script>setAge();</script></span></td>
-                </tr>
-                <tr>
-                    <td class="table-head">Email</td>
-                    <td>
-                        <a href="mailto:andrewsanthosh264@gmail.com" target="_blank"> andrewsanthosh264@gmail.com </a>
-                    </td>
-                </tr>
-            </table>
+            <div class="info-item">
+                <h4>Name:</h4>
+                <p>Andrew Santhosh C</p>
+            </div>
+            <div class="info-item">
+                <h4>Age:</h4>
+                <p id="age">
+                    <script>setAge();</script>
+                </p>
+            </div>
+            <div class="info-item">
+                <h4>Location:</h4>
+                <p>Tamil Nadu, India</p>
+            </div>
+            <div class="info-item">
+                <h4>Email:</h4>
+                <p>
+                    <a href="mailto:andrewsanthosh264@gmail.com" target="_blank">andrewsanthosh264@gmail.com</a>
+                </p>
+            </div>
+
         </div>
     </div>
     <div class="right-container">
