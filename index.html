@@ -37,12 +37,6 @@
                 <h4>Location:</h4>
                 <p>Tamil Nadu, India</p>
             </div>
-            <div class="info-item">
-                <h4>Email:</h4>
-                <p>
-                    <a href="mailto:andrewsanthosh264@gmail.com" target="_blank">andrewsanthosh264@gmail.com</a>
-                </p>
-            </div>
 
         </div>
     </div>
@@ -51,22 +45,24 @@
             <button class="tab-links" id="defaultOpen" onclick="openTab(event, 'Skills')">Skills</button>
             <button class="tab-links" onclick="openTab(event, 'Projects')">Projects</button>
             <button class="tab-links" onclick="openTab(event, 'Interests')">Interests</button>
+            <button class="tab-links" onclick="openTab(event, 'Contact')">Contact</button>
         </div>
 
         <!-- Tab content -->
         <div class="tab-content" id="Skills">
-            <h3>Skills</h3>
-            <p>These are some of the things that I am good at.</p>
+            <iframe class="tab-frame" src="skills.html"></iframe>
         </div>
 
         <div class="tab-content" id="Projects">
-            <h3>Projects</h3>
-            <p>Stuff I did in free time.</p>
+            <iframe class="tab-frame" src="projects.html"></iframe>
         </div>
 
         <div class="tab-content" id="Interests">
-            <h3>Interests</h3>
-            <p>Things I am interested in.</p>
+            <iframe class="tab-frame" src="interests.html"></iframe>
+        </div>
+
+        <div class="tab-content" id="Contact">
+            <iframe class="tab-frame" src="contact.html"></iframe>
         </div>
 
         <script>document.getElementById("defaultOpen").click();</script>
