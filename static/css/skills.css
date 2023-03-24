@@ -3,6 +3,13 @@
     flex-direction: column;
     align-items: center;
     font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: white;
+}
+
+.dark .skills-container {
+    background-color: #292d3e;
+    color: #ddd;
 }
 
 .skill-cards {
@@ -20,6 +27,15 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
     width: calc(40% - 2em);
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.dark .card {
+    background: linear-gradient(to bottom right, #414863, #26c6da);
+    color: #fff;
+    border: 1px solid #555;
 }
 
 .wide-card {
@@ -28,6 +44,12 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
     width: calc(60% - 2em);
+}
+
+.dark .wide-card {
+    background: linear-gradient(to top left, #414863, #26c6da);
+    color: #fff;
+    border: 1px solid #555;
 }
 
 .card:hover, .wide-card:hover {
