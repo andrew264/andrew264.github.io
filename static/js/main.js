@@ -31,3 +31,24 @@ function setAge() {
     }
     document.getElementById("age").textContent = age.toString();
 }
+
+
+function animateProgressBar(barId, percent) {
+    const progress = document.getElementById(barId);
+    let width = 0;
+    const id = setInterval(frame, 10);
+
+    function frame() {
+        if (width >= percent) {
+            clearInterval(id);
+        } else {
+            width++;
+            progress.style.width = width + '%';
+            if (width < 35) {
+                progress.style.backgroundColor = '#ffff4b';
+            } else {
+                progress.style.backgroundColor = '#7ef485';
+            }
+        }
+    }
+}
