@@ -1,4 +1,4 @@
-function openTab(evt, cityName) {
+function openTab(evt, tabName) {
     let i, tabContent, tabLinks;
 
     tabContent = document.getElementsByClassName("tab-content");
@@ -11,7 +11,7 @@ function openTab(evt, cityName) {
         tabLinks[i].className = tabLinks[i].className.replace(" active", "");
     }
 
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
 
