@@ -1,3 +1,5 @@
+@import "colors.css";
+
 * {
     margin: 0;
     padding: 0;
@@ -48,14 +50,14 @@
     align-items: center;
     width: 25%;
     height: 88vh;
-    background-color: #EEE;
-    color: black;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
     padding: 2vw;
 }
 
 .dark .left-container {
-    background-color: #444267;
-    color: #fff;
+    background-color: var(--secondary-color-dark);
+    color: var(--font-color-dark);
 }
 
 .profile-pic {
@@ -97,10 +99,10 @@ header, footer {
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: space-between;
-    color: white;
+    color: var(--font-color);
     padding: 1em;
     align-items: center;
-    background-color: #222;
+    background-color: var(--secondary-variant-color);
     width: 100%;
     height: 6vh;
     position: relative;
@@ -108,11 +110,12 @@ header, footer {
 }
 
 .dark header, .dark footer {
-    background-color: #202331;
+    background-color: var(--secondary-variant-color-dark);
+    color: var(--font-color-dark);
 }
 
 .dark header a, .dark footer a {
-    color: #fff;
+    color: var(--font-color-dark);
 }
 
 
@@ -138,6 +141,11 @@ footer p {
 .right-container {
     width: 75%;
     height: 88vh;
+    background-color: var(--primary-variant-color);
+}
+
+.dark .right-container {
+    background-color: var(--primary-variant-color-dark);
 }
 
 .checkbox {
@@ -148,7 +156,7 @@ footer p {
 .label {
     width: 3.125em;
     height: 1.625em;
-    background-color: #292d3e;
+    background-color: var(--primary-color-dark);
     display: flex;
     border-radius: 50px;
     align-items: center;
@@ -158,10 +166,14 @@ footer p {
     transform: scale(1.25);
 }
 
+.dark .label {
+    background-color: var(--primary-color);
+}
+
 .ball {
     width: 1.25em;
     height: 1.25em;
-    background-color: white;
+    background-color: var(--primary-color);
     position: absolute;
     top: 0.125em;
     left: 0.125em;
@@ -169,16 +181,20 @@ footer p {
     transition: transform 0.2s linear;
 }
 
+.dark .ball {
+    background-color: var(--primary-color-dark);
+}
+
 .checkbox:checked + .label .ball {
     transform: translateX(1.5em);
 }
 
 .fa-moon {
-    color: pink;
+    color: var(--primary-color-dark);
 }
 
 .fa-sun {
-    color: yellow;
+    color: var(--secondary-color);
 }
 
 @media screen and (max-width: 768px) {

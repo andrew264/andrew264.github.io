@@ -1,19 +1,23 @@
+@import "colors.css";
+
 .skills-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 2em;
     font-family: 'Roboto', sans-serif;
-    color: black;
-    background-color: white;
+    color: var(--font-color);
+    background-color: var(--primary-variant-color);
 }
 
 .dark .skills-container {
-    background-color: #292d3e;
-    color: #ddd;
+    background-color: var(--primary-variant-color-dark);
+    color: var(--font-color-dark);
 }
 
 .skill-cards {
     margin-top: 4em;
+    margin-bottom: 4em;
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
@@ -21,33 +25,22 @@
     justify-items: center;
 }
 
-.card {
-    padding: 3em;
+.card, .wide-card {
+    padding: 4em;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
     width: calc(40% - 2em);
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #ccc;
-}
-
-.dark .card {
-    background: radial-gradient(circle, #6c5b7b, #956cc0);
-    color: #fff;
-    border: 1px solid #555;
+    border: 1px solid #E5D1FA;
+    background-color: var(--secondary-color);
 }
 
 .wide-card {
-    padding: 3em;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
     width: calc(60% - 2em);
 }
 
-.dark .wide-card {
-    background: radial-gradient(circle, #8f63b5, #663399);
+.dark .card, .dark .wide-card {
+    background: radial-gradient(circle, #6c5b7b, #956cc0);
     color: #fff;
     border: 1px solid #555;
 }
@@ -55,6 +48,7 @@
 .card:hover, .wide-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--primary-color);
 }
 
 .skill-cards h3 {
@@ -66,13 +60,13 @@
 .progress-bar {
     width: 100%;
     height: 1vh;
-    background-color: #f5f5f5;
+    background-color: var(--primary-color);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .dark .progress-bar {
-    background-color: #555;
+    background-color: var(--primary-color-dark);
 }
 
 .progress {

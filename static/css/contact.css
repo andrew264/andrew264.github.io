@@ -1,3 +1,5 @@
+@import "colors.css";
+
 .contact-container {
     display: flex;
     flex-direction: column;
@@ -5,13 +7,13 @@
     align-items: center;
     padding: 4em 0;
     font-family: 'Roboto', sans-serif;
-    color: black;
-    background-color: white;
+    color: var(--font-color);
+    background-color: var(--primary-variant-color);
 }
 
 .dark .contact-container {
-    background-color: #292d3e;
-    color: #ddd;
+    background-color: var(--primary-variant-color-dark);
+    color: var(--font-color-dark);
 }
 
 .contact-items {
@@ -24,30 +26,30 @@
 }
 
 .contact-item {
-    padding: 2em;
-    border: 1px solid #ddd;
+    padding: 4em;
+    border: 1px solid #E5D1FA;
     border-radius: 5px;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     flex-basis: calc((100% - 4em) / 3);
     transition: all 0.3s ease-in-out;
 }
 
 .dark .contact-item {
-    background-color: #292d3e;
-    color: #ddd;
+    background-color: var(--secondary-color-dark);
+    color: var(--font-color-dark);
     border: 1px solid #555;
 }
 
 .contact-item:hover {
-    background-color: #f1f1f1;
+    background-color: var(--primary-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
 }
 
 .dark .contact-item:hover {
-    background-color: #aa46bb;
+    background-color: var(--primary-color-dark);
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
@@ -55,7 +57,7 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1em;
-    color: #333;
+    color: var(--font-color);
 }
 
 .dark .contact-item h3 {
@@ -67,7 +69,7 @@
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 0;
-    color: #333;
+    color: var(--font-color);
 }
 
 .dark .contact-item p {
@@ -76,7 +78,7 @@
 
 .contact-item a {
     text-decoration: none;
-    color: #333;
+    color: var(--font-color);
     transition: all 0.3s ease-in-out;
 }
 
