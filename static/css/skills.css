@@ -40,8 +40,8 @@
 }
 
 .dark .card, .dark .wide-card {
-    background: radial-gradient(circle, #6c5b7b, #956cc0);
-    color: #fff;
+    background: var(--secondary-color-dark);
+    color: var(--font-color-dark);
     border: 1px solid #555;
 }
 
@@ -49,6 +49,10 @@
     transform: translateY(-5px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background-color: var(--primary-color);
+}
+
+.dark .card:hover, .dark .wide-card:hover {
+    background-color: var(--primary-color-dark);
 }
 
 .skill-cards h3 {

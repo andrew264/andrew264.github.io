@@ -44,13 +44,11 @@
 
 .contact-item:hover {
     background-color: var(--primary-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
 }
 
 .dark .contact-item:hover {
     background-color: var(--primary-color-dark);
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
 .contact-item h3 {
