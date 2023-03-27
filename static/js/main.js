@@ -9,10 +9,12 @@ function openTab(evt, tabName) {
     tabLinks = document.getElementsByClassName("tab-links");
     for (i = 0; i < tabLinks.length; i++) {
         tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+        tabLinks[i].id = "";
     }
 
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
+    evt.currentTarget.id = "active";
 }
 
 function setCurrentYear() {
@@ -49,6 +51,27 @@ function animateProgressBar(barId, percent) {
             } else {
                 progress.style.backgroundColor = '#7ef485';
             }
+        }
+    }
+}
+
+function resizeIframe() {
+    const activeId = document.querySelector('#active').innerHTML;
+    const div = document.getElementById(activeId);
+    const iframe = div.querySelector('iframe');
+
+    if (iframe) {
+        const leftContainer = document.querySelector('.left-container');
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+            leftContainer.style.height = '25vh';
+            iframe.style.height = '75vh';
+        } else {
+            const height = iframe.contentWindow.document.body.scrollHeight;
+            iframe.style.height = `${height}px`;
+            const tabHeight = document.querySelector('.tab').offsetHeight;
+            const totalHeight = tabHeight + height;
+            leftContainer.style.height = `${totalHeight}px`;
         }
     }
 }

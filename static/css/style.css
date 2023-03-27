@@ -49,7 +49,6 @@
     flex-direction: column;
     align-items: center;
     width: 25%;
-    height: 88vh;
     background-color: var(--secondary-color);
     color: var(--font-color);
     padding: 2vw;

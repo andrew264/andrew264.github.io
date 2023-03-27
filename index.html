@@ -52,7 +52,7 @@
     </div>
     <div class="right-container">
         <div class="tab">
-            <button class="tab-links" id="defaultOpen" onclick="openTab(event, 'Skills')">Skills</button>
+            <button class="tab-links" id="active" onclick="openTab(event, 'Skills')">Skills</button>
             <button class="tab-links" onclick="openTab(event, 'Projects')">Projects</button>
             <button class="tab-links" onclick="openTab(event, 'Interests')">Interests</button>
             <button class="tab-links" onclick="openTab(event, 'Contact')">Contact</button>
@@ -75,7 +75,9 @@
             <iframe class="tab-frame" src="contact.html"></iframe>
         </div>
 
-        <script>document.getElementById("defaultOpen").click();</script>
+        <script>document.getElementById("active").click();</script>
+        <script>window.addEventListener('resize', resizeIframe);</script>
+        <script>resizeIframe();</script>
     </div>
 </div>
 <footer>
