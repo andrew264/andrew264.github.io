@@ -14,5 +14,13 @@
   "GitHub": {
     "link": "https://github.com/andrew264/",
     "displayText": "github.com/andrew264"
+  },
+  "Reddit": {
+    "link": "https://www.reddit.com/user/andrew264/",
+    "displayText": "u/andrew264"
+  },
+  "Telegram": {
+    "link": "https://t.me/andrewsanthosh",
+    "displayText": "t.me/andrewsanthosh"
   }
 }
