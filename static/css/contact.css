@@ -1,38 +1,29 @@
 @import "colors.css";
 
-.contact-container {
+.contact-cards {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4em 0;
-    font-family: 'Roboto', sans-serif;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 3em;
     color: var(--font-color);
     background-color: var(--primary-variant-color);
 }
 
-.dark .contact-container {
+.dark .contact-cards {
     background-color: var(--primary-variant-color-dark);
     color: var(--font-color-dark);
 }
 
-.contact-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em;
-    max-width: 1000px;
-    margin-top: 2em;
-}
-
 .contact-item {
-    padding: 4em;
     border: 1px solid #E5D1FA;
-    border-radius: 5px;
-    text-align: center;
+    border-radius: 10px;
+    padding: 2em;
+    margin: 1em;
+    width: 30vw;
     background-color: var(--secondary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    flex-basis: calc((100% - 4em) / 3);
     transition: all 0.3s ease-in-out;
 }
 
@@ -59,7 +50,7 @@
 }
 
 .dark .contact-item h3 {
-    color: #ddd;
+    color: var(--font-color-dark);
 }
 
 
@@ -71,7 +62,7 @@
 }
 
 .dark .contact-item p {
-    color: #ddd;
+    color: var(--font-color-dark);
 }
 
 .contact-item a {
@@ -85,16 +76,15 @@
 }
 
 
-@media screen and (max-width: 768px) {
-    .contact-items {
-        flex-wrap: wrap;
-        justify-content: center;
+@media screen and (max-width: 800px) {
+    .contact-cards {
+        flex-direction: column;
     }
 
     .contact-item {
-        flex-basis: calc((100% - 2em) / 2);
-        margin-bottom: 2em;
+        margin-bottom: 1em;
         height: auto;
+        width: 80vw;
     }
 
     .contact-item h3 {
@@ -108,11 +98,5 @@
 
     .contact-item a {
         font-size: 0.8rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .contact-item {
-        flex-basis: 100%;
     }
 }

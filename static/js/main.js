@@ -1,21 +1,22 @@
 function openTab(evt, tabName) {
-    let i, tabContent, tabLinks;
-
-    tabContent = document.getElementsByClassName("tab-content");
+    let i;
+    const tabContent = document.querySelectorAll(".tab-content");
     for (i = 0; i < tabContent.length; i++) {
         tabContent[i].style.display = "none";
     }
 
-    tabLinks = document.getElementsByClassName("tab-links");
+    const tabLinks = document.querySelectorAll(".tab-links");
     for (i = 0; i < tabLinks.length; i++) {
-        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
-        tabLinks[i].id = "";
+        tabLinks[i].classList.remove("active");
+        tabLinks[i].removeAttribute("id");
     }
 
     document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+    evt.currentTarget.classList.add("active");
     evt.currentTarget.id = "active";
+    resizeLeftContainer();
 }
+
 
 function setCurrentYear() {
     const today = new Date();
@@ -34,44 +35,24 @@ function setAge() {
     document.getElementById("age").textContent = age.toString();
 }
 
-
-function animateProgressBar(barId, percent) {
-    const progress = document.getElementById(barId);
-    let width = 0;
-    const id = setInterval(frame, 10);
-
-    function frame() {
-        if (width >= percent) {
-            clearInterval(id);
-        } else {
-            width++;
-            progress.style.width = width + '%';
-            if (width < 35) {
-                progress.style.backgroundColor = '#ffff4b';
-            } else {
-                progress.style.backgroundColor = '#7ef485';
-            }
-        }
-    }
-}
-
-function resizeIframe() {
+function resizeLeftContainer() {
     const activeId = document.querySelector('#active').innerHTML;
-    const div = document.getElementById(activeId);
-    const iframe = div.querySelector('iframe');
+    const divHeight = document.getElementById(activeId).scrollHeight;
+    const leftContainer = document.getElementById("left-container");
+    const tabHeight = document.getElementsByClassName("tab")[0].offsetHeight;
+    const totalHeight = tabHeight + divHeight;
 
-    if (iframe) {
-        const leftContainer = document.querySelector('.left-container');
-        const isMobile = window.innerWidth < 768;
-        if (isMobile) {
-            leftContainer.style.height = '25vh';
-            iframe.style.height = '75vh';
+    const headerHeight = document.querySelector('header').offsetHeight;
+    const minLeftContainerHeight = window.innerHeight - 2 * headerHeight;
+
+    if (window.innerWidth > 800) {
+        if (totalHeight < minLeftContainerHeight) {
+            leftContainer.style.height = minLeftContainerHeight + "px";
         } else {
-            const height = iframe.contentWindow.document.body.scrollHeight;
-            iframe.style.height = `${height}px`;
-            const tabHeight = document.querySelector('.tab').offsetHeight;
-            const totalHeight = tabHeight + height;
-            leftContainer.style.height = `${totalHeight}px`;
+            leftContainer.style.height = totalHeight + "px";
         }
+    } else {
+        leftContainer.style.height = "auto";
     }
+
 }

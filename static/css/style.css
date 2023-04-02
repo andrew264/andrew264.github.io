@@ -12,6 +12,11 @@
     display: flex;
     flex-direction: row;
     transition: background 0.5s linear;
+    background-color: var(--secondary-color);
+}
+
+.dark .container {
+    background-color: var(--secondary-color-dark);
 }
 
 .container h1 {
@@ -87,7 +92,7 @@
 
 .info-item p {
     margin-top: 0.5em;
-    text-align: center;
+    text-align: left;
 }
 
 .info-item h4 {
@@ -139,7 +144,7 @@ footer p {
 
 .right-container {
     width: 75%;
-    height: 88vh;
+    height: auto;
     background-color: var(--primary-variant-color);
 }
 
@@ -196,7 +201,7 @@ footer p {
     color: var(--secondary-color);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 
     .container {
         flex-direction: column;
@@ -227,7 +232,6 @@ footer p {
         display: flex;
         flex-direction: row;
         width: 100%;
-        height: 25vh;
     }
 
     .right-container {

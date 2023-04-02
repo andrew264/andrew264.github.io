@@ -16,8 +16,7 @@
 }
 
 .skill-cards {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin: 2em;
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
@@ -69,8 +68,16 @@
     overflow: hidden;
 }
 
+.progress-bar:hover {
+    background-color: var(--secondary-color);
+}
+
 .dark .progress-bar {
     background-color: var(--primary-color-dark);
+}
+
+.dark .progress-bar:hover {
+    background-color: var(--secondary-color-dark);
 }
 
 .progress {
@@ -78,7 +85,7 @@
     height: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .skill-cards {
         flex-wrap: wrap;
         justify-content: center;

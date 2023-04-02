@@ -29,7 +29,7 @@
 </header>
 <div class="container">
 
-    <div class="left-container">
+    <div class="left-container" id="left-container">
         <img alt="Profile Picture" class="profile-pic" src="static/images/profile.jpg">
         <h3 id="personal-info-text">Personal Info</h3>
         <div class="info">
@@ -60,24 +60,30 @@
 
         <!-- Tab content -->
         <div class="tab-content" id="Skills">
-            <iframe class="tab-frame" src="skills.html"></iframe>
+            <link href="static/css/skills.css" rel="stylesheet">
+            <div class="skill-cards" id="skill-cards">
+            </div>
+            <script src="static/js/skills.js"></script>
+            <script>addSkillCards();</script>
         </div>
 
         <div class="tab-content" id="Projects">
-            <iframe class="tab-frame" src="projects.html"></iframe>
         </div>
 
         <div class="tab-content" id="Interests">
-            <iframe class="tab-frame" src="interests.html"></iframe>
         </div>
 
         <div class="tab-content" id="Contact">
-            <iframe class="tab-frame" src="contact.html"></iframe>
+            <link href="static/css/contact.css" rel="stylesheet">
+            <div class="contact-cards" id="contact-cards">
+            </div>
+            <script src="static/js/contact.js"></script>
+            <script>addContactCards();</script>
         </div>
 
         <script>document.getElementById("active").click();</script>
-        <script>window.addEventListener('resize', resizeIframe);</script>
-        <script>resizeIframe();</script>
+        <script>window.addEventListener('resize', resizeLeftContainer);</script>
+        <script>resizeLeftContainer();</script>
     </div>
 </div>
 <footer>

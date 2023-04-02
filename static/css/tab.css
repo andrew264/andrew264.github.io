@@ -24,7 +24,7 @@
 }
 
 .dark .tab button {
-    color: white;
+    color: var(--font-color-dark);
 }
 
 .tab button:hover {
@@ -43,36 +43,8 @@
     background-color: var(--primary-color-dark);
 }
 
-.tab-content {
-    display: none;
-    border-top: none;
-    height: 100%;
-    background-color: var(--primary-variant-color);
-}
-
-.dark .tab-content {
-    background-color: var(--primary-variant-color-dark);
-}
-
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .tab button {
         font-size: 1.5vh;
     }
-}
-
-.tab-frame {
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    color: var(--font-color);
-    background-color: var(--primary-variant-color);
-    overflow: hidden;
-}
-
-.dark .tab-frame {
-    background-color: var(--primary-variant-color-dark);
-    color: var(--font-color-dark);
 }

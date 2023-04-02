@@ -1,0 +1,18 @@
+{
+  "Email": {
+    "link": "mailto:andrewsanthosh264@gmail.com",
+    "displayText": "andrewsanthosh264@gmail.com"
+  },
+  "Phone": {
+    "link": "tel:+91-123-456-0000",
+    "displayText": "+91-123-456-0000"
+  },
+  "LinkedIn": {
+    "link": "https://www.linkedin.com/in/andrew264/",
+    "displayText": "linkedin.com/andrew264"
+  },
+  "GitHub": {
+    "link": "https://github.com/andrew264/",
+    "displayText": "github.com/andrew264"
+  }
+}
