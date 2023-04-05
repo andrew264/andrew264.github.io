@@ -14,7 +14,7 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.classList.add("active");
     evt.currentTarget.id = "active";
-    resizeLeftContainer();
+    resizePageHeight();
 }
 
 
@@ -35,7 +35,7 @@ function setAge() {
     document.getElementById("age").textContent = age.toString();
 }
 
-function resizeLeftContainer() {
+function resizePageHeight() {
     const activeId = document.querySelector('#active').innerHTML;
     const divHeight = document.getElementById(activeId).scrollHeight;
     const leftContainer = document.getElementById("left-container");
@@ -46,11 +46,11 @@ function resizeLeftContainer() {
     const leftContainerHeight = leftContainer.scrollHeight;
 
     if (window.innerWidth > 800) {
-        if (window.outerHeight > (leftContainerHeight + headerHeight) && window.outerHeight > (totalRightHeight + 2 * headerHeight)) {
-            leftContainer.style.height = window.outerHeight - headerHeight + "px"
-        } else if (leftContainerHeight < totalRightHeight) {
-            leftContainer.style.height = totalRightHeight + "px";
-        } else if (leftContainerHeight > totalRightHeight) {
+        if (window.innerHeight > leftContainerHeight && window.innerHeight > totalRightHeight) {
+            leftContainer.style.height = (window.innerHeight - headerHeight) + "px";
+        } else if (totalRightHeight > leftContainerHeight) {
+            leftContainer.style.height = totalRightHeight + headerHeight + "px";
+        } else if (totalRightHeight < leftContainerHeight) {
             leftContainer.style.height = "auto";
         }
     } else {
@@ -72,6 +72,7 @@ function setRandomIntro() {
             const intervalId = setInterval(() => {
                 document.getElementById("intro").innerHTML += intro[index] + ' ';
                 index++;
+                if (intro[index] === '<br>') resizePageHeight();
                 if (index === intro.length) {
                     clearInterval(intervalId);
                     document.getElementById("cursor").style.display = "none";

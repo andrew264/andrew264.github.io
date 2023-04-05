@@ -1,26 +1,12 @@
 @import "colors.css";
 
-.skills-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 2em;
-    font-family: 'Roboto', sans-serif;
-    color: var(--font-color);
-    background-color: var(--primary-variant-color);
-}
-
-.dark .skills-container {
-    background-color: var(--primary-variant-color-dark);
-    color: var(--font-color-dark);
-}
-
 .skill-cards {
-    margin: 2em;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
     gap: 2em;
-    max-width: 96%;
     justify-items: center;
 }
 
@@ -28,8 +14,7 @@
     padding: 4em;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-    width: calc(40% - 2em);
+    width: calc(40% - 4em);
     border: 1px solid #E5D1FA;
     background-color: var(--secondary-color);
 }
@@ -54,9 +39,9 @@
 }
 
 .skill-cards h3 {
-    font-size: 1.5em;
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 .progress-bar {

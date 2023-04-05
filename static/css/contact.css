@@ -24,7 +24,6 @@
     width: 30vw;
     background-color: var(--secondary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
 }
 
 .dark .contact-item {
@@ -46,13 +45,7 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1em;
-    color: var(--font-color);
 }
-
-.dark .contact-item h3 {
-    color: var(--font-color-dark);
-}
-
 
 .contact-item p {
     font-size: 1.2rem;
@@ -68,7 +61,6 @@
 .contact-item a {
     text-decoration: none;
     color: var(--font-color);
-    transition: all 0.3s ease-in-out;
 }
 
 .dark .contact-item a {
