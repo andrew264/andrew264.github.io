@@ -3,6 +3,7 @@
     --primary-variant-color: #E9EDC9;
     --secondary-color: #FEFAE0;
     --secondary-variant-color: #FAEDCD;
+    --hover-color: #BEC79E;
     --font-color: #1d1d45;
 }
 
@@ -11,5 +12,6 @@
     --primary-variant-color-dark: #443C68;
     --secondary-color-dark: #393053;
     --secondary-variant-color-dark: #18122B;
+    --hover-color-dark: #2C1E3A;
     --font-color-dark: #ddd;
 }

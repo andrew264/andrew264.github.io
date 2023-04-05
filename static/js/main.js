@@ -40,19 +40,44 @@ function resizeLeftContainer() {
     const divHeight = document.getElementById(activeId).scrollHeight;
     const leftContainer = document.getElementById("left-container");
     const tabHeight = document.getElementsByClassName("tab")[0].offsetHeight;
-    const totalHeight = tabHeight + divHeight;
+    const totalRightHeight = tabHeight + divHeight;
 
-    const headerHeight = document.querySelector('header').offsetHeight;
-    const minLeftContainerHeight = window.innerHeight - 2 * headerHeight;
+    const headerHeight = document.querySelector('header').offsetHeight * 2;
+    const leftContainerHeight = leftContainer.scrollHeight;
 
     if (window.innerWidth > 800) {
-        if (totalHeight < minLeftContainerHeight) {
-            leftContainer.style.height = minLeftContainerHeight + "px";
-        } else {
-            leftContainer.style.height = totalHeight + "px";
+        if (window.outerHeight > (leftContainerHeight + headerHeight) && window.outerHeight > (totalRightHeight + 2 * headerHeight)) {
+            leftContainer.style.height = window.outerHeight - headerHeight + "px"
+        } else if (leftContainerHeight < totalRightHeight) {
+            leftContainer.style.height = totalRightHeight + "px";
+        } else if (leftContainerHeight > totalRightHeight) {
+            leftContainer.style.height = "auto";
         }
     } else {
         leftContainer.style.height = "auto";
     }
 
+}
+
+function setRandomIntro() {
+    let request = new XMLHttpRequest();
+    request.open("GET", "/static/json/intros.json", true);
+    request.onload = function () {
+
+        if (request.status >= 200 && request.status < 400) {
+            const data = JSON.parse(request.responseText);
+            const randomIndex = Math.floor(Math.random() * data.length);
+            const intro = data[randomIndex].replace(/\n/g, ' <br> ').split(' ');
+            let index = 0;
+            const intervalId = setInterval(() => {
+                document.getElementById("intro").innerHTML += intro[index] + ' ';
+                index++;
+                if (index === intro.length) {
+                    clearInterval(intervalId);
+                    document.getElementById("cursor").style.display = "none";
+                }
+            }, 66);
+        }
+    }
+    request.send();
 }

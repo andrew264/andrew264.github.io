@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 }
 
 .container {
@@ -50,9 +51,6 @@
 }
 
 .left-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 25%;
     background-color: var(--secondary-color);
     color: var(--font-color);
@@ -65,12 +63,18 @@
 }
 
 .profile-pic {
-    max-width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.profile-pic img {
+    max-width: 80%;
     max-height: 100%;
     border-radius: 50%;
     position: relative;
     top: 0;
-    pointer-events: none;
 }
 
 #personal-info-text {
@@ -84,19 +88,30 @@
     margin-top: 0.5em;
 }
 
-.info-item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0.75em;
+.info p {
+    margin-top: 0.5em;
+    font-size: 1.25vw;
+    text-align: justify;
+    font-family: 'Source Code Pro', monospace;
 }
 
-.info-item p {
-    margin-top: 0.5em;
+.cursor {
+    display: inline-block;
+    width: 0.5em;
+    height: 1em;
+    background-color: var(--primary-color);
+    animation: blink 0.5s infinite;
     text-align: left;
 }
 
-.info-item h4 {
-    margin-top: 0.5em;
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.dark .cursor {
+    background-color: var(--primary-color-dark);
 }
 
 header, footer {
@@ -229,8 +244,7 @@ footer p {
     }
 
     .left-container {
-        display: flex;
-        flex-direction: row;
+        display: block;
         width: 100%;
     }
 
@@ -238,13 +252,10 @@ footer p {
         width: 100%;
     }
 
-    .profile-pic {
+    .profile-pic img {
         max-width: 25%;
         max-height: 100%;
         border-radius: 50%;
-        margin-right: 10px;
-        position: relative;
-        top: 0;
     }
 
     #personal-info-text {
@@ -253,30 +264,24 @@ footer p {
     }
 
     .info {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: block;
         margin-top: 0.5em;
     }
 
-    .info-item {
-        margin-bottom: 0.75em;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        padding-left: 1em;
-    }
-
-    .info-item p {
-        margin-top: 0.5em;
-        text-align: left;
-    }
-
-    .info-item.p:hover {
-        overflow: visible;
+    .info p {
+        margin-top: 1em;
+        font-size: 1.7vh;
+        text-align: justify;
     }
 
     .label {
         transform: scale(1);
     }
 
+}
+
+@media screen and (max-width: 480px) {
+    .profile-pic img {
+        max-width: 50%;
+    }
 }

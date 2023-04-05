@@ -27,7 +27,7 @@
 .card, .wide-card {
     padding: 4em;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
     width: calc(40% - 2em);
     border: 1px solid #E5D1FA;
@@ -46,12 +46,11 @@
 
 .card:hover, .wide-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    background-color: var(--primary-color);
+    background-color: var(--hover-color);
 }
 
 .dark .card:hover, .dark .wide-card:hover {
-    background-color: var(--primary-color-dark);
+    background-color: var(--hover-color-dark);
 }
 
 .skill-cards h3 {
@@ -68,16 +67,8 @@
     overflow: hidden;
 }
 
-.progress-bar:hover {
-    background-color: var(--secondary-color);
-}
-
 .dark .progress-bar {
     background-color: var(--primary-color-dark);
-}
-
-.dark .progress-bar:hover {
-    background-color: var(--secondary-color-dark);
 }
 
 .progress {

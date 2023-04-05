@@ -30,25 +30,14 @@
 <div class="container">
 
     <div class="left-container" id="left-container">
-        <img alt="Profile Picture" class="profile-pic" src="static/images/profile.jpg">
-        <h3 id="personal-info-text">Personal Info</h3>
-        <div class="info">
-            <div class="info-item">
-                <h4>Name:</h4>
-                <p>Andrew Santhosh C</p>
-            </div>
-            <div class="info-item">
-                <h4>Age:</h4>
-                <p id="age">
-                    <script>setAge();</script>
-                </p>
-            </div>
-            <div class="info-item">
-                <h4>Location:</h4>
-                <p>Tamil Nadu, India</p>
-            </div>
-
+        <div class="profile-pic">
+            <img alt="Profile Picture" src="static/images/profile.jpg">
         </div>
+        <div class="info">
+            <p id="intro"></p>
+        </div>
+        <span class="cursor" id="cursor"></span>
+        <script>setRandomIntro();</script>
     </div>
     <div class="right-container">
         <div class="tab">
