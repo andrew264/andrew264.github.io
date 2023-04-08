@@ -43,6 +43,7 @@ function animateProgressBar(barId, percent) {
     let bar = document.getElementById(barId);
     let width = 0;
     let id = setInterval(frame, 10);
+
     function frame() {
         if (width >= percent) {
             clearInterval(id);
@@ -57,6 +58,7 @@ function animateProgressBar(barId, percent) {
         }
     }
 }
+
 function getWideIndexes(length) {
     const indexes = [];
     for (let i = 0; i < length; i++) {

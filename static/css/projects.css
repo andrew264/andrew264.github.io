@@ -5,17 +5,17 @@
     flex-wrap: wrap;
     position: relative;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     margin-top: 3em;
-    gap: 2em;
+    margin-bottom: 3em;
     justify-items: center;
+    gap: 2em;
 }
 
 .project-card {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: calc(50% - 4em);
-    height: auto;
+    width: calc(50% - 3em);
     border: 1px solid #E5D1FA;
     background-color: var(--secondary-color);
 }
@@ -73,7 +73,7 @@
     flex-wrap: wrap;
     gap: 1em;
     opacity: 0;
-    margin: 1em;
+    padding: 1em;
     position: inherit;
     pointer-events: none;
 }
@@ -99,18 +99,36 @@
 @media screen and (max-width: 800px) {
     .project-cards {
         flex-direction: column;
-        gap: 1em;
+        align-content: center;
     }
 
     .project-card {
-        width: calc(100% - 4em);
+        width: calc(100% - 2em);
         height: auto;
+    }
+
+    .project-content {
+        padding: 1em;
+    }
+
+    .project-content h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+
+    .project-content p {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 0;
+        text-align: justify;
     }
 
     .project-tags {
         position: inherit;
         opacity: 1;
         pointer-events: all;
+        gap: 0.5em;
     }
 
 }

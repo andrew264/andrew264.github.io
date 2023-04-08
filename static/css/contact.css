@@ -7,6 +7,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     margin-top: 3em;
+    margin-bottom: 3em;
+    gap: 2em;
     color: var(--font-color);
     background-color: var(--primary-variant-color);
 }
@@ -20,8 +22,7 @@
     border: 1px solid #E5D1FA;
     border-radius: 10px;
     padding: 2em;
-    margin: 1em;
-    width: 30vw;
+    width: calc(50% - 3em);
     background-color: var(--secondary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -74,9 +75,8 @@
     }
 
     .contact-item {
-        margin-bottom: 1em;
         height: auto;
-        width: 80vw;
+        width: calc(100% - 2em);
     }
 
     .contact-item h3 {
