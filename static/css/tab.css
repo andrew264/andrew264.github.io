@@ -1,9 +1,9 @@
-@import "colors.css";
+@import 'colors.css';
 
 .tab {
-    overflow: hidden;
     background-color: var(--primary-variant-color);
     color: var(--font-color);
+    overflow: hidden;
 }
 
 .dark .tab {
@@ -13,13 +13,13 @@
 
 .tab button {
     background-color: inherit;
-    float: left;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 1.5vw;
-    color: var(--font-color);
     border: none;
+    color: var(--font-color);
+    cursor: pointer;
+    float: left;
+    font-size: 1.5vw;
+    outline: none;
+    padding: 14px 16px;
 }
 
 .dark .tab button {
@@ -27,7 +27,7 @@
 }
 
 .tab button:hover {
-    background-color: var(--hover-color)
+    background-color: var(--hover-color);
 }
 
 .dark .tab button:hover {

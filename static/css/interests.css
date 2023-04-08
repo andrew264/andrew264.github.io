@@ -1,36 +1,36 @@
-@import "colors.css";
+@import 'colors.css';
 
 .interest-cards {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3em;
-    margin-bottom: 3em;
     gap: 2em;
+    justify-content: center;
     justify-items: center;
+    margin-bottom: 3em;
+    margin-top: 3em;
 }
 
 .interest-card {
-    display: flex;
-    flex-direction: row;
+    background-color: var(--secondary-color);
+    border: 1px solid #e5d1fa;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: calc(100% - 4em);
+    display: flex;
+    flex-direction: row;
     height: auto;
-    border: 1px solid #E5D1FA;
-    background-color: var(--secondary-color);
+    width: calc(100% - 4em);
 }
 
 .dark .interest-card {
     background: var(--secondary-color-dark);
+    border: 1px solid #555555;
     color: var(--font-color-dark);
-    border: 1px solid #555;
 }
 
 .interest-card:hover {
-    transform: translateY(-5px);
     background-color: var(--hover-color);
+    transform: translateY(-5px);
 }
 
 .dark .interest-card:hover {
@@ -38,13 +38,13 @@
 }
 
 .interest-content {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    padding: 3em;
     gap: 1em;
+    justify-content: center;
+    padding: 3em;
+    text-align: justify;
     width: 75%;
 }
 
@@ -54,35 +54,43 @@
 }
 
 .interest-pic {
-    width: 25%;
     position: relative;
+    width: 25%;
 }
 
 .interest-pic img {
-    position: absolute;
-    margin: auto;
-    top: 0;
     bottom: 0;
+    margin: auto;
     max-height: 100%;
-    width: 100%;
     object-fit: scale-down;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .interest-pic::before {
-    content: "";
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        #fefae0aa
+    );
+    border-radius: 10px;
+    content: '';
+    height: 100%;
+    left: 0;
+    pointer-events: none;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #FEFAE0AA);
     z-index: 1;
-    pointer-events: none;
 }
 
 .dark .interest-pic::before {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #393053AA);
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        #393053aa
+    );
 }
 
 @media screen and (max-width: 800px) {
@@ -91,8 +99,8 @@
     }
 
     .interest-content {
-        width: 60%;
         padding: 1em;
+        width: 60%;
     }
 
     .interest-content h3 {

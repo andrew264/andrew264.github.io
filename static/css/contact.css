@@ -1,16 +1,16 @@
-@import "colors.css";
+@import 'colors.css';
 
 .contact-cards {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    gap: 2em;
-    color: var(--font-color);
     background-color: var(--primary-variant-color);
+    color: var(--font-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    margin-bottom: 3em;
+    margin-top: 3em;
 }
 
 .dark .contact-cards {
@@ -19,18 +19,18 @@
 }
 
 .contact-item {
-    border: 1px solid #E5D1FA;
+    background-color: var(--secondary-color);
+    border: 1px solid #e5d1fa;
     border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 2em;
     width: calc(50% - 3em);
-    background-color: var(--secondary-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .dark .contact-item {
     background-color: var(--secondary-color-dark);
+    border: 1px solid #555555;
     color: var(--font-color-dark);
-    border: 1px solid #555;
 }
 
 .contact-item:hover {
@@ -49,10 +49,10 @@
 }
 
 .contact-item p {
+    color: var(--font-color);
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 0;
-    color: var(--font-color);
 }
 
 .dark .contact-item p {
@@ -60,14 +60,13 @@
 }
 
 .contact-item a {
-    text-decoration: none;
     color: var(--font-color);
+    text-decoration: none;
 }
 
 .dark .contact-item a {
-    color: #bbb;
+    color: #bbbbbb;
 }
-
 
 @media screen and (max-width: 800px) {
     .contact-cards {

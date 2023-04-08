@@ -1,27 +1,27 @@
 {
-  "Rust": {
-    "name": "Rust",
-    "description": "I am personally interested in Rust, as it is both easy to learn and powerful. I have reimplemented my QuickChat program in Rust with all its features, currently looking into implementing its GUI in Rust as well.",
-    "image": "https://foundation.rust-lang.org/img/rust-logo-blk.svg"
-  },
-  "Unreal Engine": {
-    "name": "Unreal Engine by Epic Games",
-    "description": "Fan of the Unreal Engine, looking forward to learning more about it in the near future.",
-    "image": "static/images/UE_Logo.svg"
-  },
-  "TensorFlow": {
-    "name": "TensorFlow by Google",
-    "description": "Have used TensorFlow for a few of my older projects, and am still learning new things about it. I have created an LSTM model for word prediction. Curious about various text tokenization methods, and how to implement them in TensorFlow.",
-    "image": "static/images/TF.svg"
-  },
-  "AOSP": {
-    "name": "Android Open Source Project by Google",
-    "description": "Built a couple ROMs for my old phones, always been a fan of Android. Android is what made me want to learn programming in the first place. Even though I don't build ROMs anymore, I still keep up with the latest Android changes under the hood.",
-    "image": "static/images/android.png"
-  },
-  "Video Games": {
-    "name": "Video Games",
-    "description": "I have been playing video games since I brought my first PC. I like to play games that are fun, and have a good story. I have played games like Grand Theft Auto V, Red Dead Redemption 2, God of War, Minecraft, etc. Video games are a great way to relax and have fun.",
-    "image": "static/images/steam.png"
-  }
+    "Rust": {
+        "name": "Rust",
+        "description": "I am personally interested in Rust, as it is both easy to learn and powerful. I have reimplemented my QuickChat program in Rust with all its features, currently looking into implementing its GUI in Rust as well.",
+        "image": "https://foundation.rust-lang.org/img/rust-logo-blk.svg"
+    },
+    "Unreal Engine": {
+        "name": "Unreal Engine by Epic Games",
+        "description": "Fan of the Unreal Engine, looking forward to learning more about it in the near future.",
+        "image": "static/images/UE_Logo.svg"
+    },
+    "TensorFlow": {
+        "name": "TensorFlow by Google",
+        "description": "Have used TensorFlow for a few of my older projects, and am still learning new things about it. I have created an LSTM model for word prediction. Curious about various text tokenization methods, and how to implement them in TensorFlow.",
+        "image": "static/images/TF.svg"
+    },
+    "AOSP": {
+        "name": "Android Open Source Project by Google",
+        "description": "Built a couple ROMs for my old phones, always been a fan of Android. Android is what made me want to learn programming in the first place. Even though I don't build ROMs anymore, I still keep up with the latest Android changes under the hood.",
+        "image": "static/images/android.png"
+    },
+    "Video Games": {
+        "name": "Video Games",
+        "description": "I have been playing video games since I brought my first PC. I like to play games that are fun, and have a good story. I have played games like Grand Theft Auto V, Red Dead Redemption 2, God of War, Minecraft, etc. Video games are a great way to relax and have fun.",
+        "image": "static/images/steam.png"
+    }
 }

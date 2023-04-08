@@ -1,41 +1,26 @@
 {
-  "Andrew's Assistant": {
-    "description": "A Discord Bot that can do a lot of things, including playing music, searching for memes, and more!",
-    "tags": [
-      "Python",
-      "Asyncio"
-    ],
-    "imageUrl": "static/images/discordBot.png",
-    "creationDate": "19-Mar-2021"
-  },
-  "Andrew's Website": {
-    "description": "A website that I made to showcase my projects and to learn more about web development.",
-    "tags": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "imageUrl": "static/images/website.png",
-    "creationDate": "21-Mar-2023"
-  },
-  "QuickChat": {
-    "description": "A chat app that works on the same network as the server with TCP. Easy to use & no setup required",
-    "tags": [
-      "Java",
-      "Socket Programming",
-      "Swing"
-    ],
-    "imageUrl": "static/images/quickChat.png",
-    "creationDate": "24-Aug-2022"
-  },
-  "News Summarizer": {
-    "description": "A app that summarizes news articles with Server/Client Architecture. Uses PyTorch for Inference.",
-    "tags": [
-      "Python",
-      "Flask",
-      "PyTorch"
-    ],
-    "imageUrl": "static/images/newsSumm.png",
-    "creationDate": "10-Feb-2023"
-  }
+    "Andrew's Assistant": {
+        "description": "A Discord Bot that can do a lot of things, including playing music, searching for memes, and more!",
+        "tags": ["Python", "Asyncio"],
+        "imageUrl": "static/images/discordBot.png",
+        "creationDate": "19-Mar-2021"
+    },
+    "Andrew's Website": {
+        "description": "A website that I made to showcase my projects and to learn more about web development.",
+        "tags": ["HTML", "CSS", "JavaScript"],
+        "imageUrl": "static/images/website.png",
+        "creationDate": "21-Mar-2023"
+    },
+    "QuickChat": {
+        "description": "A chat app that works on the same network as the server with TCP. Easy to use & no setup required",
+        "tags": ["Java", "Socket Programming", "Swing"],
+        "imageUrl": "static/images/quickChat.png",
+        "creationDate": "24-Aug-2022"
+    },
+    "News Summarizer": {
+        "description": "A app that summarizes news articles with Server/Client Architecture. Uses PyTorch for Inference.",
+        "tags": ["Python", "Flask", "PyTorch"],
+        "imageUrl": "static/images/newsSumm.png",
+        "creationDate": "10-Feb-2023"
+    }
 }

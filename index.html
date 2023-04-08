@@ -1,92 +1,130 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>My Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="static/css/style.css" rel="stylesheet">
-    <link href="static/css/tab.css" rel="stylesheet">
-    <script src="static/js/main.js"></script>
-</head>
-<body>
-<header>
-    <h1>PORTFOLIO</h1>
-    <nav>
-        <ul>
-            <div class="theme-switch">
-                <input class="checkbox" id="checkbox" type="checkbox">
-                <label class="label" for="checkbox">
-                    <i class="fas fa-moon"></i>
-                    <i class='fas fa-sun'></i>
-                    <div class="ball"></div>
-                </label>
-                <script src="static/js/changeTheme.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>My Portfolio</title>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link href="static/css/style.css" rel="stylesheet" />
+        <link href="static/css/tab.css" rel="stylesheet" />
+        <script src="static/js/main.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>PORTFOLIO</h1>
+            <nav>
+                <ul>
+                    <div class="theme-switch">
+                        <input class="checkbox" id="checkbox" type="checkbox" />
+                        <label class="label" for="checkbox">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                        <script src="static/js/changeTheme.js"></script>
+                    </div>
+                    <!-- TODO -->
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="left-container" id="left-container">
+                <div class="profile-pic">
+                    <img
+                        alt="Profile Picture"
+                        src="static/images/profile.jpg"
+                    />
+                </div>
+                <div class="info">
+                    <p id="intro"></p>
+                </div>
+                <span class="cursor" id="cursor"></span>
+                <script>
+                    setRandomIntro()
+                </script>
             </div>
-            <!-- TODO -->
-        </ul>
-    </nav>
-</header>
-<div class="container">
+            <div class="right-container">
+                <div class="tab">
+                    <button
+                        class="tab-links"
+                        id="active"
+                        onclick="openTab(event, 'Skills')"
+                    >Skills</button>
+                    <button
+                        class="tab-links"
+                        onclick="openTab(event, 'Projects')"
+                    >Projects</button>
+                    <button
+                        class="tab-links"
+                        onclick="openTab(event, 'Interests')"
+                    >Interests</button>
+                    <button
+                        class="tab-links"
+                        onclick="openTab(event, 'Contact')"
+                    >Contact</button>
+                </div>
 
-    <div class="left-container" id="left-container">
-        <div class="profile-pic">
-            <img alt="Profile Picture" src="static/images/profile.jpg">
-        </div>
-        <div class="info">
-            <p id="intro"></p>
-        </div>
-        <span class="cursor" id="cursor"></span>
-        <script>setRandomIntro();</script>
-    </div>
-    <div class="right-container">
-        <div class="tab">
-            <button class="tab-links" id="active" onclick="openTab(event, 'Skills')">Skills</button>
-            <button class="tab-links" onclick="openTab(event, 'Projects')">Projects</button>
-            <button class="tab-links" onclick="openTab(event, 'Interests')">Interests</button>
-            <button class="tab-links" onclick="openTab(event, 'Contact')">Contact</button>
-        </div>
+                <!-- Tab content -->
+                <div class="tab-content" id="Skills">
+                    <link href="static/css/skills.css" rel="stylesheet" />
+                    <div class="skill-cards" id="skill-cards"></div>
+                    <script src="static/js/skills.js"></script>
+                    <script>
+                        addSkillCards()
+                    </script>
+                </div>
 
-        <!-- Tab content -->
-        <div class="tab-content" id="Skills">
-            <link href="static/css/skills.css" rel="stylesheet">
-            <div class="skill-cards" id="skill-cards">
+                <div class="tab-content" id="Projects">
+                    <link href="static/css/projects.css" rel="stylesheet" />
+                    <div class="project-cards" id="project-cards"></div>
+                    <script src="static/js/projects.js"></script>
+                    <script>
+                        addProjectCards()
+                    </script>
+                </div>
+
+                <div class="tab-content" id="Interests">
+                    <link href="static/css/interests.css" rel="stylesheet" />
+                    <div class="interest-cards" id="interest-cards"></div>
+                    <script src="static/js/interests.js"></script>
+                    <script>
+                        addInterestCards()
+                    </script>
+                </div>
+
+                <div class="tab-content" id="Contact">
+                    <link href="static/css/contact.css" rel="stylesheet" />
+                    <div class="contact-cards" id="contact-cards"></div>
+                    <script src="static/js/contact.js"></script>
+                    <script>
+                        addContactCards()
+                    </script>
+                </div>
+
+                <script>
+                    document.getElementById('active').click()
+                </script>
+                <script>
+                    window.addEventListener('resize', resizePageHeight)
+                </script>
+                <script>
+                    resizePageHeight()
+                </script>
             </div>
-            <script src="static/js/skills.js"></script>
-            <script>addSkillCards();</script>
         </div>
-
-        <div class="tab-content" id="Projects">
-            <link href="static/css/projects.css" rel="stylesheet">
-            <div class="project-cards" id="project-cards">
-            </div>
-            <script src="static/js/projects.js"></script>
-            <script>addProjectCards();</script>
-        </div>
-
-        <div class="tab-content" id="Interests">
-            <link href="static/css/interests.css" rel="stylesheet">
-            <div class="interest-cards" id="interest-cards">
-            </div>
-            <script src="static/js/interests.js"></script>
-            <script>addInterestCards();</script>
-        </div>
-
-        <div class="tab-content" id="Contact">
-            <link href="static/css/contact.css" rel="stylesheet">
-            <div class="contact-cards" id="contact-cards">
-            </div>
-            <script src="static/js/contact.js"></script>
-            <script>addContactCards();</script>
-        </div>
-
-        <script>document.getElementById("active").click();</script>
-        <script>window.addEventListener('resize', resizePageHeight);</script>
-        <script>resizePageHeight();</script>
-    </div>
-</div>
-<footer>
-    <p>&copy; <span id="currentYear"><script>setCurrentYear();</script></span> Andrew 💚</p>
-</footer>
-</body>
+        <footer>
+            <p>
+                &copy;
+                <span id="currentYear">
+                    <script>
+                        setCurrentYear()
+                    </script>
+                </span>
+                Andrew 💚
+            </p>
+        </footer>
+    </body>
 </html>
