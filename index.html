@@ -9,26 +9,82 @@
             rel="stylesheet"
         />
         <link href="static/css/style.css" rel="stylesheet" />
-        <link href="static/css/tab.css" rel="stylesheet" />
         <script src="static/js/main.js"></script>
     </head>
     <body>
         <header>
-            <h1>PORTFOLIO</h1>
-            <nav>
-                <ul>
-                    <div class="theme-switch">
-                        <input class="checkbox" id="checkbox" type="checkbox" />
-                        <label class="label" for="checkbox">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                            <div class="ball"></div>
-                        </label>
-                        <script src="static/js/changeTheme.js"></script>
-                    </div>
-                    <!-- TODO -->
-                </ul>
-            </nav>
+            <h1 id="page-title">PORTFOLIO</h1>
+            <div class="nav-buttons">
+                <button
+                    class="nav-button-item"
+                    id="active"
+                    onclick="openTab(event, 'Skills')"
+                >
+                    Skills
+                </button>
+                <button
+                    class="nav-button-item"
+                    onclick="openTab(event, 'Projects')"
+                >
+                    Projects
+                </button>
+                <button
+                    class="nav-button-item"
+                    onclick="openTab(event, 'Interests')"
+                >
+                    Interest
+                </button>
+                <button
+                    class="nav-button-item"
+                    onclick="openTab(event, 'Contact')"
+                >
+                    Contact
+                </button>
+            </div>
+
+            <div class="theme-switch">
+                <input class="checkbox" id="toggle-night" type="checkbox" />
+                <label class="checkbox-label" for="toggle-night">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                </label>
+
+                <script src="static/js/changeTheme.js"></script>
+            </div>
+            <script>
+                const navButtons = document.querySelector('.nav-buttons')
+                const themeSwitch = document.querySelector('.theme-switch')
+                const header = document.querySelector('header')
+
+                // Detect changes in the screen width
+                window.addEventListener('resize', function () {
+                    const screenWidth =
+                        window.innerWidth ||
+                        document.documentElement.clientWidth ||
+                        document.body.clientWidth
+                    console.log(screenWidth)
+
+                    // If the screen width is less than 800px and the divs haven't been swapped, swap them
+                    if (screenWidth < 800) {
+                        header.insertBefore(themeSwitch, navButtons)
+                        console.log('swapped')
+                    }
+                    // If the screen width is greater than or equal to 800px and the divs have been swapped, swap them back
+                    else if (screenWidth >= 800) {
+                        header.insertBefore(navButtons, themeSwitch)
+                    }
+                })
+
+                // Swap the positions of the div elements on page load if necessary
+                const screenWidth =
+                    window.innerWidth ||
+                    document.documentElement.clientWidth ||
+                    document.body.clientWidth
+                if (screenWidth < 800) {
+                    header.insertBefore(themeSwitch, navButtons)
+                }
+            </script>
         </header>
         <div class="container">
             <div class="left-container" id="left-container">
@@ -47,27 +103,6 @@
                 </script>
             </div>
             <div class="right-container">
-                <div class="tab">
-                    <button
-                        class="tab-links"
-                        id="active"
-                        onclick="openTab(event, 'Skills')"
-                    >Skills</button>
-                    <button
-                        class="tab-links"
-                        onclick="openTab(event, 'Projects')"
-                    >Projects</button>
-                    <button
-                        class="tab-links"
-                        onclick="openTab(event, 'Interests')"
-                    >Interests</button>
-                    <button
-                        class="tab-links"
-                        onclick="openTab(event, 'Contact')"
-                    >Contact</button>
-                </div>
-
-                <!-- Tab content -->
                 <div class="tab-content" id="Skills">
                     <link href="static/css/skills.css" rel="stylesheet" />
                     <div class="skill-cards" id="skill-cards"></div>

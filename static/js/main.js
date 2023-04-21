@@ -5,7 +5,7 @@ function openTab(evt, tabName) {
         tabContent[i].style.display = 'none'
     }
 
-    const tabLinks = document.querySelectorAll('.tab-links')
+    const tabLinks = document.querySelectorAll('.nav-button-item')
     for (i = 0; i < tabLinks.length; i++) {
         tabLinks[i].classList.remove('active')
         tabLinks[i].removeAttribute('id')
