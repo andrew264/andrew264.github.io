@@ -43,14 +43,14 @@
 }
 
 .contact-item h3 {
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: bold;
     margin-bottom: 1em;
 }
 
 .contact-item p {
     color: var(--font-color);
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     line-height: 1.5;
     margin-bottom: 0;
 }
@@ -79,15 +79,15 @@
     }
 
     .contact-item h3 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5em;
+        font-size: 2vh;
+        margin-bottom: 0.5vh;
     }
 
     .contact-item p {
-        font-size: 1rem;
+        font-size: 1.5vh;
     }
 
     .contact-item a {
-        font-size: 0.8rem;
+        font-size: 0.8vh;
     }
 }

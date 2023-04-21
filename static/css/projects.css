@@ -40,14 +40,14 @@
 }
 
 .project-content h3 {
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: bold;
     margin-bottom: 1em;
 }
 
 .project-content p {
     color: var(--font-color);
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     line-height: 1.5;
     margin-bottom: 0;
     text-align: justify;
@@ -82,7 +82,7 @@
     background-color: var(--primary-color);
     border-radius: 10px;
     color: var(--font-color);
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     padding: 0.5em 1em;
 }
 
@@ -129,5 +129,9 @@
         opacity: 1;
         pointer-events: all;
         position: inherit;
+    }
+
+    .project-tags span {
+        font-size: 1.5vh;
     }
 }

@@ -44,7 +44,7 @@
 }
 
 .skill-cards h3 {
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: bold;
     margin-bottom: 1em;
 }
@@ -76,5 +76,9 @@
     .wide-card {
         padding: 2em;
         width: calc(100% - 2em);
+    }
+
+    .skill-cards h3 {
+        font-size: 2vh;
     }
 }

@@ -53,9 +53,9 @@ function animateProgressBar(barId, percent) {
             width++
             bar.style.width = width + '%'
             if (width < 35) {
-                bar.style.backgroundColor = '#ffff4b'
+                bar.style.backgroundColor = '#DEECFF'
             } else {
-                bar.style.backgroundColor = '#7ef485'
+                bar.style.backgroundColor = '#E8D3FF'
             }
         }
     }

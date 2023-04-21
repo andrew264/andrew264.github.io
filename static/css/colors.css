@@ -1,17 +1,17 @@
 :root {
-    --font-color: #1D1D45;
-    --hover-color: #BEC79E;
-    --primary-color: #CCD5AE;
-    --secondary-color: #FEFAE0;
-    --primary-variant-color: #E9EDC9;
-    --secondary-variant-color: #FAEDCD;
+    --font-color: #1d1d45;
+    --hover-color: #4e84ba;
+    --primary-color: #53cde2;
+    --secondary-color: #d1f4fa;
+    --primary-variant-color: #8fecff;
+    --secondary-variant-color: #005792;
 }
 
 :root {
-    --font-color-dark: #DDDDDD;
-    --hover-color-dark: #2C1E3A;
+    --font-color-dark: #dddddd;
+    --hover-color-dark: #2c1e3a;
     --primary-color-dark: #635985;
     --secondary-color-dark: #393053;
-    --primary-variant-color-dark: #443C68;
-    --secondary-variant-color-dark: #18122B;
+    --primary-variant-color-dark: #443c68;
+    --secondary-variant-color-dark: #18122b;
 }
