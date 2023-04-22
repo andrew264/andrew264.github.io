@@ -47,6 +47,7 @@
 .card h3 {
     font-size: 2vw;
     font-weight: bold;
+    font-family: 'Titillium Web', sans-serif;
     margin-bottom: 1em;
 }
 
@@ -85,6 +86,7 @@
     z-index: 1;
     font-size: 1vw;
     text-align: justify;
+    font-style: italic;
 }
 
 .dark .tooltip .tooltip-text {

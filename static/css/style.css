@@ -1,19 +1,22 @@
 @import 'colors.css';
 
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     transition: all cubic-bezier(0.08, 1.25, 0, 1.25) 0.5s;
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 }
 
 .container {
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: row;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .dark .container {
@@ -108,9 +111,10 @@ footer {
 }
 
 .nav-button-item {
+    font-family: 'Titillium Web', sans-serif;
     margin-right: 1em;
     width: 10vw;
-    height: 2vw;
+    height: 2.5vw;
     border-radius: 50px;
     text-align: center;
     background-color: var(--secondary-color);
@@ -221,6 +225,7 @@ footer {
 }
 
 header h1 {
+    font-family: 'Bruno Ace', cursive;
     font-size: 2.5vw;
     font-weight: bolder;
 }
