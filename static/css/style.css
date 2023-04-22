@@ -340,4 +340,13 @@ footer p {
     .profile-pic img {
         max-width: 50%;
     }
+
+    header {
+        height: 16vh;
+    }
+
+    #page-title {
+        font-size: 4vh;
+        width: 75vw;
+    }
 }
