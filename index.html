@@ -57,33 +57,25 @@
                 const themeSwitch = document.querySelector('.theme-switch')
                 const header = document.querySelector('header')
 
-                // Detect changes in the screen width
                 window.addEventListener('resize', function () {
                     const screenWidth =
                         window.innerWidth ||
                         document.documentElement.clientWidth ||
                         document.body.clientWidth
-                    console.log(screenWidth)
 
-                    // If the screen width is less than 800px and the divs haven't been swapped, swap them
                     if (screenWidth < 800) {
                         header.insertBefore(themeSwitch, navButtons)
-                        console.log('swapped')
-                    }
-                    // If the screen width is greater than or equal to 800px and the divs have been swapped, swap them back
-                    else if (screenWidth >= 800) {
+                    } else if (screenWidth >= 800) {
                         header.insertBefore(navButtons, themeSwitch)
                     }
                 })
 
-                // Swap the positions of the div elements on page load if necessary
                 const screenWidth =
                     window.innerWidth ||
                     document.documentElement.clientWidth ||
                     document.body.clientWidth
-                if (screenWidth < 800) {
+                if (screenWidth < 800)
                     header.insertBefore(themeSwitch, navButtons)
-                }
             </script>
         </header>
         <div class="container">

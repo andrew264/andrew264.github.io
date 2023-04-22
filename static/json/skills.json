@@ -1,8 +1,26 @@
 {
-    "Python": 85,
-    "Java": 45,
-    "Front-End": 55,
-    "Rust": 35,
-    "git": 70,
-    "Linux": 50
+    "Python": {
+        "percent": 80,
+        "description": "Python introduced me into the world of programming. I have been using it for 3 years now and I am still learning new things about it."
+    },
+    "Java": {
+        "percent": 45,
+        "description": "Java introduced me to Object Oriented Programming. I have been using it for 2 years now and did a few projects with it."
+    },
+    "Front-End": {
+        "percent": 60,
+        "description": "Using HTML, CSS and JavaScript for couple months now. This website is a testing ground for me to learn more about it."
+    },
+    "Rust": {
+        "percent": 30,
+        "description": "It is still a new language for me and I am still learning this language and I am looking forward to using it in the future."
+    },
+    "git": {
+        "percent": 70,
+        "description": "I have used git wherever it makes sense to do so. I have used it for personal projects and for school projects."
+    },
+    "Linux": {
+        "percent": 50,
+        "description": "I have used Linux and it was my first operating system. I can navigate through the terminal and I can install programs."
+    }
 }

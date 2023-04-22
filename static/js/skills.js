@@ -14,7 +14,7 @@ function addSkillCards() {
                 const card = createSkillCard(key, value, isWide)
                 allCards.appendChild(card)
 
-                animateProgressBar(key, value)
+                animateProgressBar(key, value['percent'])
             }
         }
     }
@@ -24,10 +24,16 @@ function addSkillCards() {
 function createSkillCard(key, value, isWide) {
     let article = document.createElement('article')
     article.className = isWide ? 'wide-card' : 'card'
+    article.className += ' tooltip'
 
     let heading = document.createElement('h3')
     heading.textContent = key
     article.appendChild(heading)
+
+    let tooltip = document.createElement('span')
+    tooltip.className = 'tooltip-text'
+    tooltip.textContent = value['description']
+    article.appendChild(tooltip)
 
     let progressBarContainer = document.createElement('div')
     progressBarContainer.className = 'progress-bar'
